@@ -1,0 +1,33 @@
+
+Bias
+It refers to model fitting the training data poorly but able to produce similar result in data outside training data. 
+It is related to underfitting. In simple/layman's term, we are building simple models that predicts terribly far from 
+the reality but they don't change much from dataset to dataset.
+
+Variance
+
+We are building complex models that fits well on training data but they cannot generalise the pattern well which results to overfitting. 
+It means they don't fit well on data outside training (i.e. validation / test datasets). 
+In simple terms, it means they might predict close to reality on average, but they tend to change much more with small changes in the input.
+
+An algorithm like Decision Tree has low bias but high variance, 
+because it can easily change as small change in input variable. 
+In general, it does not generalize the pattern well. It leads to overfitting.
+
+Bias-variance trade-off
+It means there is a trade-off between predictive accuracy and generalization of pattern outside training data. 
+Increasing the accuracy of the model will lead to less generalization of pattern outside training data. 
+Increasing the bias will decrease the variance. Increasing the variance will decrease the bias.
+
+How to correct Bias-Variance Error
+1. Try smaller number of predictors (only important ones) when you have high variance
+2. Try larger number of predictors or transform predictors when you have high bias
+3. Get more training data when you have high variance
+
+In decision trees, pruning of tree is a method to reduce variance. 
+It reduces the size of decision trees by removing sections of the tree that provide little power to classify instances.
+
+Training and Cross-Validation Error
+High Variance - High difference between cross-validation error and the training set error. 
+    To overcome it, use more training data. If it is not possible to include more data, include only important predictors or independent variables.
+High Bias - Low difference between cross-validation and training error. Try more predictors or transform existing predictors.

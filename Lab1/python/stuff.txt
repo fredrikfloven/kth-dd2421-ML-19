@@ -1,0 +1,7 @@
+monk3train, monk3val = partition(m.monk3, fraction)
+            tree3 = d.buildTree(monk3train, m.attributes)
+            treelist3 = possibleTrees(d.allPruned(tree3))
+            bestPrunedTree3Value = 0
+            for prunedTree in treelist3:
+                if(d.check(prunedTree, monk3val) > bestPrunedTree3):
+                    bestPrunedTree3 = prunedTree
